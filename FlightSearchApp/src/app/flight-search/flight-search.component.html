@@ -1,0 +1,105 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+  <mat-form-field appearance="fill">
+    <mat-label>Origin Location Code</mat-label>
+    <input
+      matInput
+      formControlName="originLocationCode"
+      placeholder="e.g., JFK"
+    />
+    <mat-error *ngIf="searchForm.value.originLocationCode"
+      >Origin location code must be exactly 3 characters.</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Destination Location Code</mat-label>
+    <input
+      matInput
+      formControlName="destinationLocationCode"
+      placeholder="e.g., LHR"
+    />
+    <mat-error *ngIf="searchForm.value.destinationLocationCode"
+      >Destination location code must be exactly 3 characters.</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Departure Date</mat-label>
+    <input
+      matInput
+      formControlName="departureDate"
+      [matDatepicker]="departureDate"
+    />
+    <mat-datepicker-toggle
+      matIconSuffix
+      [for]="departureDate"
+    ></mat-datepicker-toggle>
+    <mat-datepicker #departureDate></mat-datepicker>
+    <mat-error *ngIf="searchForm.value.departureDate"
+      >Departure date must be in the future.</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Return Date</mat-label>
+    <input matInput formControlName="returnDate" [matDatepicker]="returnDate" />
+    <mat-datepicker-toggle
+      matIconSuffix
+      [for]="returnDate"
+    ></mat-datepicker-toggle>
+    <mat-datepicker #returnDate></mat-datepicker>
+    <mat-error *ngIf="searchForm.value.returnDate"
+      >Return date must be after the departure date.</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Adults</mat-label>
+    <input matInput formControlName="adults" type="number" min="1" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Currency</mat-label>
+    <mat-select formControlName="currency">
+      <mat-option value="USD">USD</mat-option>
+      <mat-option value="EUR">EUR</mat-option>
+      <mat-option value="HRK">HRK</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="!searchForm.valid"
+  >
+    Search
+  </button>
+</form>
+
+<div *ngIf="loading" class="loading-spinner">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="!loading && searchResults.length > 0">
+  <mat-table [dataSource]="searchResults" class="mat-elevation-z8">
+    <ng-container
+      *ngFor="let column of displayedColumns"
+      [matColumnDef]="column"
+    >
+      <mat-header-cell *matHeaderCellDef>
+        {{ getHeaderLabel(column) }}
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{ element[column] }}
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+</div>
+
+<div *ngIf="!loading && searchResults.length === 0">
+  <p>No results found.</p>
+</div>

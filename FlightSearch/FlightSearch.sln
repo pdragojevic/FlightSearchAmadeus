@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSearch.Domain", "FlightSearch.Domain\FlightSearch.Domain.csproj", "{65FC6A97-0FE7-4C84-BB94-2FBC10C39B2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSearch.Infrastructure", "FlightSearch.Infrastructure\FlightSearch.Infrastructure.csproj", "{25899E57-5648-414C-A84D-64DBACD8EE4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSearch.Application", "FlightSearch.Application\FlightSearch.Application.csproj", "{56B287C5-8316-4D5D-85F9-30F9A2C11079}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSearch.API", "FlightSearch.API\FlightSearch.API.csproj", "{85BB2B99-212F-4032-AD4C-74F45C569E96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65FC6A97-0FE7-4C84-BB94-2FBC10C39B2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65FC6A97-0FE7-4C84-BB94-2FBC10C39B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65FC6A97-0FE7-4C84-BB94-2FBC10C39B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65FC6A97-0FE7-4C84-BB94-2FBC10C39B2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25899E57-5648-414C-A84D-64DBACD8EE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25899E57-5648-414C-A84D-64DBACD8EE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25899E57-5648-414C-A84D-64DBACD8EE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25899E57-5648-414C-A84D-64DBACD8EE4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56B287C5-8316-4D5D-85F9-30F9A2C11079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56B287C5-8316-4D5D-85F9-30F9A2C11079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56B287C5-8316-4D5D-85F9-30F9A2C11079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56B287C5-8316-4D5D-85F9-30F9A2C11079}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85BB2B99-212F-4032-AD4C-74F45C569E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85BB2B99-212F-4032-AD4C-74F45C569E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85BB2B99-212F-4032-AD4C-74F45C569E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85BB2B99-212F-4032-AD4C-74F45C569E96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

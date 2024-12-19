@@ -1,0 +1,31 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  flex: 1 1 calc(33.333% - 16px);
+  min-width: 250px;
+}
+
+button {
+  align-self: center;
+  margin-top: 8px;
+}
+
+.mat-table {
+  width: 100%;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.search-container {
+  margin: 20px;
+}

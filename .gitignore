@@ -1,0 +1,43 @@
+# General OS-specific and editor files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor Configurations
+.idea/
+.vscode/
+
+# .NET Backend Ignore Rules
+**/bin/
+**/obj/
+**/*.user
+**/*.suo
+**/.vs/
+**/*.db
+**/*.log
+**/appsettings.*.json
+
+# Angular Frontend Ignore Rules
+FlightSearchApp/node_modules/
+FlightSearchApp/dist/
+FlightSearchApp/.angular/
+FlightSearchApp/.idea/
+FlightSearchApp/.vscode/
+FlightSearchApp/dump.rdb
+FlightSearchApp/package-lock.json
+
+# Environment and Temporary Files
+FlightSearchApp/.env
+**/*.tmp
+**/*.temp
+*.log
+
+# Test Files and Coverage
+FlightSearchApp/coverage/
+**/TestResults/
+**/*.coverage
+**/*.spec.json
+
+# Miscellaneous
+*.bak
+*.swp
+*.cache
